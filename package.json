@@ -5,12 +5,12 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/voxeldavid/ryanwatts"
+    "url": "http://github.com/TheSpicyPepper/ryanwatts.github.io"
   },
   "author": "David Minnerly, Ryan Watts",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/voxeldavid/ryanwatts/issues"
+    "url": "https://github.com/TheSpicyPepper/ryanwatts.github.io/issues"
   },
-  "homepage": "https://github.com/voxeldavid/ryanwatts"
+  "homepage": "https://github.com/TheSpicyPepper/ryanwatts.github.io",
 }
