@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
-var minify = require('gulp-minify-css');
+var sass = require('gulp-sass');
 
 var connect = require('connect');
 var del = require('del');
@@ -38,8 +38,11 @@ gulp.task('clean', function(callback) {
 // =============================================================================
 
 gulp.task('styles', function() {
-  return gulp.src(join(paths.css, '**'), { base: paths.src })
-    .pipe(minify())
+  return gulp.src(join(paths.css, '**/*.scss'), { base: paths.src })
+    .pipe(sass({
+      sourcemap: false,
+      style: 'compressed'
+    }))
     .pipe(gulp.dest(paths.dest));
 });
 
