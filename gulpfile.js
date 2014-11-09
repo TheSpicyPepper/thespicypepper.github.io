@@ -99,6 +99,7 @@ gulp.task('watch', function() {
 // =============================================================================
 
 gulp.task('build', [
+  'clean',
   'styles',
   'images',
   'move'
