@@ -14,6 +14,7 @@ var join = path.join;
 var paths = {
   src:    'src',
   css:    'src/css',
+  img:    'src/img',
 
   dest:   'build'
 }
@@ -42,6 +43,15 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(paths.dest));
 });
 
+gulp.task('images', function() {
+  return gulp.src(join(paths.img, '**'), { base: paths.src })
+    .pipe(imagemin({
+      optimizationLevel: 5,
+      progressive: true
+    }))
+    .pipe(gulp.dest(paths.dest));
+});
+
 // Moving files that aren't processed by the above tasks.
 gulp.task('move', function() {
   return gulp.src(staticFiles)
@@ -61,7 +71,9 @@ gulp.task('server', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.css, ['styles']);
+  gulp.watch(join(paths.css, '**'), ['styles']);
+
+  gulp.watch(join(paths.img, '**'), ['images']);
 
   gulp.watch(join(paths.src, '**/*.html'), ['move']);
 });
@@ -70,7 +82,7 @@ gulp.task('watch', function() {
 // Tasks
 // =============================================================================
 
-gulp.task('build', ['styles', 'move']);
+gulp.task('build', ['styles', 'images', 'move']);
 
 gulp.task('serve', ['build', 'server', 'watch'])
 
