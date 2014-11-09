@@ -17,11 +17,21 @@ var paths = {
   dest: 'build'
 }
 
-// These files don't need any pre-processing done to them. Generally just
-// globbing file extensions.
-var staticFiles = [
-  'src/**/*.html'
-];
+// These files don't need any pre-processing done to them. Primarily for copying
+// html files.
+var staticFiles = prepend(paths.src, [
+  '**/*.html'
+]);
+
+/**
+ * Prepend a path infront of a list of files.
+ */
+function prepend(dir, files) {
+  files.forEach(function(file, index) {
+    files[index] = join(dir, file);
+  });
+  return files;
+}
 
 
 // Cleaning
