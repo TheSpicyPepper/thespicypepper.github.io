@@ -1,0 +1,22 @@
+
+body {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #444444;
+}
+
+.container {
+  margin: 0 auto;
+  width: 35rem;
+}
+
+a:link, a:visited {
+  color: #90bb74;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+  a:hover, a:active {
+    color: #73955c;
+  }
