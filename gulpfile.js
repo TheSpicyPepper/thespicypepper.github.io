@@ -20,7 +20,8 @@ var paths = {
 // These files don't need any pre-processing done to them. Primarily for copying
 // html files.
 var staticFiles = prepend(paths.src, [
-  '**/*.html'
+  '**/*.html',
+  'CNAME'
 ]);
 
 /**
