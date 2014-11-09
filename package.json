@@ -13,6 +13,7 @@
     "url": "https://github.com/TheSpicyPepper/ryanwatts.github.io/issues"
   },
   "homepage": "https://github.com/TheSpicyPepper/ryanwatts.github.io",
+  "private": true,
   "devDependencies": {
     "connect": "^3.3.2",
     "del": "^0.1.3",
