@@ -1,10 +1,11 @@
-var gulp        = require('gulp');
-var imagemin    = require('gulp-imagemin');
-var sass        = require('gulp-sass');
-var connect     = require('connect');
-var del         = require('del');
-var path        = require('path');
-var serveStatic = require('serve-static');
+var gulp          = require('gulp');
+var imagemin      = require('gulp-imagemin');
+var sass          = require('gulp-sass');
+var autoprefixer  = require('gulp-autoprefixer');
+var connect       = require('connect');
+var del           = require('del');
+var path          = require('path');
+var serveStatic   = require('serve-static');
 
 var join = path.join;
 
@@ -51,6 +52,9 @@ gulp.task('styles', function() {
     .pipe(sass({
       sourcemap: false,
       style: 'compressed'
+    }))
+    .pipe(autoprefixer({
+      browers: 'last 2 versions'
     }))
     .pipe(gulp.dest(paths.dest));
 });
