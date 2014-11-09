@@ -1,10 +1,9 @@
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var sass = require('gulp-sass');
-
-var connect = require('connect');
-var del = require('del');
-var path = require('path');
+var gulp        = require('gulp');
+var imagemin    = require('gulp-imagemin');
+var sass        = require('gulp-sass');
+var connect     = require('connect');
+var del         = require('del');
+var path        = require('path');
 var serveStatic = require('serve-static');
 
 var join = path.join;
@@ -12,11 +11,10 @@ var join = path.join;
 // Locations where files are stored. Commonly used with 'path.join' and a
 // globbing pattern
 var paths = {
-  src:    'src',
-  css:    'src/css',
-  img:    'src/img',
-
-  dest:   'build'
+  src: 'src',
+  css: 'src/css',
+  img: 'src/img',
+  dest: 'build'
 }
 
 // These files don't need any pre-processing done to them. Generally just
@@ -85,8 +83,16 @@ gulp.task('watch', function() {
 // Tasks
 // =============================================================================
 
-gulp.task('build', ['styles', 'images', 'move']);
+gulp.task('build', [
+  'styles',
+  'images',
+  'move'
+]);
 
-gulp.task('serve', ['build', 'server', 'watch'])
+gulp.task('serve', [
+  'build',
+  'server',
+  'watch'
+]);
 
 gulp.task('default', ['serve']);
