@@ -1,0 +1,16 @@
+{
+  "name": "ryanwatts",
+  "version": "1.0.0",
+  "description": "The website of Ryan Watts",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/voxeldavid/ryanwatts"
+  },
+  "author": "David Minnerly, Ryan Watts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/voxeldavid/ryanwatts/issues"
+  },
+  "homepage": "https://github.com/voxeldavid/ryanwatts"
+}
