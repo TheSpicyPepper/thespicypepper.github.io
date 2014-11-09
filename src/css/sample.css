@@ -30,6 +30,16 @@ a:link, a:visited {
     color: #73955c;
   }
 
+::-moz-selection {
+  color: #f0f0f0;
+  background: #6078ad;
+}
+
+::selection {
+  color: #f0f0f0;
+  background: #6078ad;
+}
+
 /**
  * Viewport sized background image. Maintains 100% height when zooming in and
  * out, aswell as resizing the browser window.
