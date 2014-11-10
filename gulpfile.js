@@ -2,6 +2,7 @@ var gulp          = require('gulp');
 var imagemin      = require('gulp-imagemin');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
+var deploy        = require('gulp-gh-pages');
 var connect       = require('connect');
 var del           = require('del');
 var path          = require('path');
@@ -95,6 +96,15 @@ gulp.task('watch', function() {
 });
 
 
+// Deployment
+// =============================================================================
+
+gulp.task('gh-pages', ['build'], function() {
+  return gulp.src(join(paths.dest, '**/*'))
+    .pipe(deploy());
+});
+
+
 // Tasks
 // =============================================================================
 
@@ -109,6 +119,10 @@ gulp.task('serve', [
   'build',
   'server',
   'watch'
+]);
+
+gulp.task('deploy', [
+  'gh-pages'
 ]);
 
 gulp.task('default', ['serve']);
