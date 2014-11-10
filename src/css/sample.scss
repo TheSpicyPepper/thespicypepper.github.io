@@ -13,6 +13,23 @@ body {
   width: 35rem;
 }
 
+.masthead__container {
+  display: table;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+  .masthead__vertical {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+    .masthead__inner {
+      margin: 0 auto;
+      max-width: 32em;
+    }
+
 h1, h2, h3, h4, h5, h6,
 ul, ol, dd,
 p, figure, blockquote,
