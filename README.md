@@ -1,8 +1,8 @@
-## The Website of Ryan Watts
+# [ryanwatts.me](http://ryanwatts.me)
 
-Helping my friend Ryan out by setting him up with a simple website hosted on [Github Pages](http://pages.github.com/).
+Helping my musician friend Ryan out by setting him up with a site on [Github Pages](https://pages.github.com/)
 
-He's supplying me with the html, and I'm writing the styles and hooking up all the classes.
+He's very new to this stuff, so I'm trying to teach him a little bit about HTML so he can make minor modifications to his site, at the very least.
 
 ## Contributing
 
