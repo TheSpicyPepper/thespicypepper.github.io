@@ -28,6 +28,12 @@ var staticFiles = prepend(paths.src, [
 
 /**
  * Prepend a path infront of a list of files.
+ *
+ * Example:
+
+     prepend('src', ['index.html', '404.html']);
+
+ * Returns an array containing 'src/index.html' and 'src/404.html'.
  */
 function prepend(dir, files) {
   files.forEach(function(file, index) {
