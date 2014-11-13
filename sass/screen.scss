@@ -1,7 +1,11 @@
+/* Compass modules */
+@import "compass/typography/vertical_rhythm";
 
 /* Normalize.css - v3.0.2
  * https://necolas.github.io/normalize.css */
 @import "normalize";
+
+@import "settings";
 
 ::-moz-selection {
   color: #f0f0f0;
@@ -12,6 +16,9 @@
   color: #f0f0f0;
   background: #6078ad;
 }
+
+/* Define the font size and line height based on the values set in _settings */
+@include establish-baseline();
 
 h1, h2, h3, h4, h5, h6,
 ul, ol, dd,
@@ -25,6 +32,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", "Droid Serif", "Times New Roman", Times, serif;
 }
 
+h1 {
+  @include adjust-font-size-to(38px);
+  @include adjust-leading-to(1);
+}
+
 html,
 body {
   height: 100%;
@@ -32,8 +44,6 @@ body {
 }
 
 body {
-  font-size: 1em;
-  line-height: 1.5;
   font-family: Roboto, "Droid Sans", Arial, sans-serif;
   color: #e8e8e8;
   background-color: #242628;
