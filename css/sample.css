@@ -16,6 +16,10 @@ pre, table, fieldset, hr {
   margin-bottom: 1.5em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", "Droid Serif", "Times New Roman", Times, serif;
+}
+
 html,
 body {
   height: 100%;
@@ -25,6 +29,7 @@ body {
 body {
   font-size: 1em;
   line-height: 1.5;
+  font-family: Roboto, "Droid Sans", Arial, sans-serif;
   color: #e8e8e8;
   background-color: #242628;
 }
