@@ -1,0 +1,13 @@
+
+/* Define the font size and line height based on the values set in _settings */
+@include establish-baseline();
+
+::-moz-selection {
+  color: #f0f0f0;
+  background: #6078ad;
+}
+
+::selection {
+  color: #f0f0f0;
+  background: #6078ad;
+}

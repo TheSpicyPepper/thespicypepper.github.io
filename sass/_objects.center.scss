@@ -1,0 +1,21 @@
+
+/**
+ * Used for vertical centering.
+ */
+
+.center__container {
+  display: table;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.center__vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.center__inner {
+  margin: 0 auto;
+  max-width: 32em;
+}
