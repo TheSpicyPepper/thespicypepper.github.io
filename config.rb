@@ -8,3 +8,4 @@ images_dir      = "img"
 javascripts_dir = "js"
 
 line_comments = false
+output_style = :compressed
